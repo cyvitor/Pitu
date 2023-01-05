@@ -1,0 +1,27 @@
+- Iniciar o projeto
+
+npm --init -y
+
+- Instalado o Express
+
+npm install express
+
+- Instalado typescript
+
+npm install typescript
+
+- Configurado do typescript para o express
+
+npm install @types/express
+
+- inicia o typescript
+
+npx tsc --init
+
+- configura o tscondig.json
+
+- Edita o package.json, adicionando o script
+
+"start": "npx tsc && node .\\dist\\server.js"
+
+compila e executa o projeto
