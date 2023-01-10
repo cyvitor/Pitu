@@ -5,8 +5,8 @@ const router = Router();
 
 router.post('/links', LinksControllers.postLink);
 
-router.get('/link/:code', LinksControllers.hitLink);
+router.get('/links/:code', LinksControllers.hitLink);
 
-router.get('/link/:code/stats', LinksControllers.getLink);
+router.get('/links/:code/stats', LinksControllers.getLink);
 
 export default router;
