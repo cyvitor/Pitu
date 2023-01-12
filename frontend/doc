@@ -1,3 +1,9 @@
 - inicializando o projeto
 
 npx create-react-app frontend
+
+- instalar a versão correta do react router dom
+
+yarn add react-router-dom@5.2.0
+ou
+npm i react-router-dom@5.2.0

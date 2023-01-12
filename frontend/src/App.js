@@ -1,8 +1,5 @@
+import Routes from "./routes";
 
-function App() {
-  return (
-    <div >Pitu Hello word</div>
-  );
-}
+const App = () => <Routes />;
 
 export default App;
