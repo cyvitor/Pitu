@@ -38,3 +38,7 @@ npm install @types/validator
 
 npm install mysql2
 
+--- iniciando o front end efetuando modificações no backend instalado o cors
+
+npm install cors --save
+npm install @types/cors --save-dev

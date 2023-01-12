@@ -3,5 +3,5 @@ import database from './database';
 
 database.sync();
 
-app.listen(3000);
+app.listen(3001);
 console.log('Server running...');

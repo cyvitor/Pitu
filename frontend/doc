@@ -1,0 +1,3 @@
+- inicializando o projeto
+
+npx create-react-app frontend
