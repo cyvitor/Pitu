@@ -25,3 +25,16 @@ npx tsc --init
 "start": "npx tsc && node .\\dist\\server.js"
 
 compila e executa o projeto
+
+- Instala sequelize
+
+npm install sequelize
+
+- Instala os types
+
+npm install @types/validator
+
+- instala biblioteca do mysql
+
+npm install mysql2
+

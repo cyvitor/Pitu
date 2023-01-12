@@ -4,5 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = __importDefault(require("./app"));
+const database_1 = __importDefault(require("./database"));
+database_1.default.sync();
 app_1.default.listen(3000);
 console.log('Server running...');
