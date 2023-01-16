@@ -12,3 +12,28 @@ npm i react-router-dom@5.2.0
 
 yarn add axios
 
+- React bootstrap - biblioteca para construção e estilo de paginas web
+
+yarn add react-bootstrap bootstrap
+
+- é necessario instalar outra dependencia node-sass na versão 4.14.1
+
+yarn add node-sass@4.14.1
+
+- por problemas no python, mas eu tive q tirar a versão, para a versão padrão 
+
+yarn add node-sass
+
+- Styled componenets - biblioteca que permite cirar componentes estilizados
+
+yarn add styled-components
+
+- Font Awesome - biblioteca de icones e fontes
+
+https://fontawesome.com/docs/web/use-with/react/ 
+e seguit as instruções.
+
+yarn add @fortawesome/fontawesome-svg-core
+yarn add @fortawesome/free-solid-svg-icons
+yarn add @fortawesome/free-regular-svg-icons
+yarn add @fortawesome/react-fontawesome
