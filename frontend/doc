@@ -7,3 +7,8 @@ npx create-react-app frontend
 yarn add react-router-dom@5.2.0
 ou
 npm i react-router-dom@5.2.0
+
+- instalar o axios | biblioteca de chamadas http
+
+yarn add axios
+
