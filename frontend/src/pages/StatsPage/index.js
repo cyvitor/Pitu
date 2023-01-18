@@ -4,6 +4,9 @@ import { Container } from 'react-bootstrap';
 import ShortenerService from "../../services/shortenerService";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { StatsContainer, StatsRow, StatsBox, StatsBoxTitle } from './styles'
+import {parseISO, formatRelative} from 'date-fns'
+import ptBr from 'date-fns/locale/pt-BR';
+import { ptBR } from "date-fns/locale";
 
 class StatsPage extends React.Component {
     constructor(props) {
@@ -21,7 +24,15 @@ class StatsPage extends React.Component {
         try {
             const service = new ShortenerService();
             const shortenedURL = await service.getStats(code);
-            this.setState({isLoading: false, shortenedURL})
+            this.setState({isLoading: false, shortenedURL});
+
+            const parsedDate = parseISO(shortenedURL.updatedAt);
+            const currentDate = new Date();
+            const relativeDate = formatRelative(parsedDate, currentDate, {
+                locale: ptBR,
+            })
+            shortenedURL.relativeDate = relativeDate;
+
         } catch (error) {
             this.setState({isLoading: false, errorMessage: 'ERROR, deu ruim ' + error})
         }
@@ -44,12 +55,12 @@ class StatsPage extends React.Component {
                         <p>Rediciona para:<br />{shortenedURL.url}</p>
                         <StatsRow>
                             <StatsBox>
-                                <b>{shortenedURL.hits}</b>
                                 <StatsBoxTitle>Acessos:</StatsBoxTitle>
+                                <b>{shortenedURL.hits}</b>
                             </StatsBox>
                             <StatsBox>
-                                <b>{shortenedURL.relativeDate}</b>
                                 <StatsBoxTitle>Ultimo acesso:</StatsBoxTitle>
+                                <b>{shortenedURL.relativeDate}</b>
                             </StatsBox>
                         </StatsRow>
                         <a className="btn btn-primary" href="/" >Encontar uma URL</a>

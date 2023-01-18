@@ -37,3 +37,8 @@ yarn add @fortawesome/fontawesome-svg-core
 yarn add @fortawesome/free-solid-svg-icons
 yarn add @fortawesome/free-regular-svg-icons
 yarn add @fortawesome/react-fontawesome
+
+
+- trabalhando com datas com date-fns.org
+
+yarn add date-fns
