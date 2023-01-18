@@ -1,6 +1,6 @@
 import React from "react";
 import Header from '../../components/Header';
-import { ContentContainer, Form } from './styles';
+import { ContentContainer, Form, AdsBlock } from './styles';
 import { Container, InputGroup, FormControl, Button, Alert, Spinner } from 'react-bootstrap';
 import ShoternerService from '../../services/shortenerService';
 
@@ -88,6 +88,11 @@ class HomePage extends React.Component {
                     )
                 )}
                 {erroMessage && <Alert variant="danger">{erroMessage}</Alert>}
+                <ContentContainer>
+                    <AdsBlock className="mb-3">
+                        Adsnse
+                    </AdsBlock>
+                </ContentContainer>
             </Container>
         )
     }
