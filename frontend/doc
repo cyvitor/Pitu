@@ -42,3 +42,68 @@ yarn add @fortawesome/react-fontawesome
 - trabalhando com datas com date-fns.org
 
 yarn add date-fns
+
+
+Deploy NODE APP
+
+Backend
+
+Install nvm
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+	. ~/.nvm/nvm.sh
+
+install node
+	nvm install --lts
+
+instala typescript global
+	npm install -g typescript
+
+install dependencias
+	npm install
+
+subir aplicação automaticamente
+	npm install -g pm2
+
+	subir automaticamente com o SO
+		pm2 startup
+
+	registrar uma aplicação
+		pm2 start npm --name pitu_backend -- start
+	
+	
+
+frontend
+	Adiciona no package.json
+		"homepage": "http://app.vh5.tech/",
+	
+	Arquivos ENV
+		.env.development - é chamando no comando yarn start
+		.env.production  - é chamando no comando yarn build
+
+
+	criar build
+		yarn build
+		
+
+	deploy no apache
+	
+		prepara o apache
+			a2enmod rewrite
+
+		no virtual host adicionar:
+			
+			<Directory /var/www/app_pitu>
+
+				AllowOverride All
+			</Directory>
+
+		criar diretorio home .htaccess
+
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
+
+
+	talvez precise instalar:
+		npm install -g create-react-app
