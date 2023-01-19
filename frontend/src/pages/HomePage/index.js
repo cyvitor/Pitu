@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import { ContentContainer, Form, AdsBlock } from './styles';
 import { Container, InputGroup, FormControl, Button, Alert, Spinner } from 'react-bootstrap';
 import ShoternerService from '../../services/shortenerService';
+import vars from '../../configs/vars';
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -69,7 +70,7 @@ class HomePage extends React.Component {
                             <InputGroup className="mb-3">
                                 <FormControl
                                     autoFocus={true}
-                                    defaultValue={`http://172.16.2.200/${code}`}
+                                    defaultValue={vars.HOST_APP + code}
                                     ref={(input) => this.inputURL = input}
                                 />
                                 <Button variant="outline-secondary" onClick={() => this.copyToClipboard()}>Copiar</Button>
@@ -78,7 +79,7 @@ class HomePage extends React.Component {
                             <InputGroup className="mb-3">
                                 <FormControl
                                     
-                                    defaultValue={`http://172.16.2.200/${code}/stats`}
+                                    defaultValue={vars.HOST_APP + code + `/stats`}
                                     ref={(input2) => this.inputURL = input2}
                                 />
                                 <Button variant="outline-secondary" onClick={() => this.copyToClipboard()}>Copiar</Button>

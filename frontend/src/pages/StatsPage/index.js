@@ -7,6 +7,7 @@ import { StatsContainer, StatsRow, StatsBox, StatsBoxTitle } from './styles'
 import {parseISO, formatRelative} from 'date-fns'
 import ptBr from 'date-fns/locale/pt-BR';
 import { ptBR } from "date-fns/locale";
+import vars from '../../configs/vars';
 
 class StatsPage extends React.Component {
     constructor(props) {
@@ -51,7 +52,7 @@ class StatsPage extends React.Component {
                     </StatsContainer>
                 ) : (
                     <StatsContainer className="text-center">
-                        <p><b>http://172.16.2.200/{shortenedURL.code}</b></p>
+                        <p><b> {vars.HOST_APP + shortenedURL.code}</b></p>
                         <p>Rediciona para:<br />{shortenedURL.url}</p>
                         <StatsRow>
                             <StatsBox>
